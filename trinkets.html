@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>trinket</title>
+<style type="text/css">
+	select{width:300px;}
+	span{display:block; float:left; width:360px;}
+	div{border-top:1px solid #000} 
+</style>
+</head>
+<script type="text/javascript" src="http://git.oschina.net/liezhang/DarkestDungeon/raw/master/EnhancedJS.js"></script>
+<script type="text/javascript" src="http://git.oschina.net/liezhang/DarkestDungeon/raw/master/trinket.js"></script>
+<script type="text/javascript" src="http://git.oschina.net/liezhang/DarkestDungeon/raw/master/buff_library.json"></script>
+<script type="text/javascript" src="http://git.oschina.net/liezhang/DarkestDungeon/raw/master/default.trinkets.json"></script>
+<script type="text/javascript" src="http://git.oschina.net/liezhang/DarkestDungeon/raw/master/beautify.js"></script>
+<script type="text/javascript" src="http://git.oschina.net/liezhang/DarkestDungeon/raw/master/attach.js"></script>
+<script type="text/javascript">
+	window.onload=function(){
+		attach();
+	}
+	//alert([] instanceof Array)
+</script>
+<body>
+<p>trinkets列表</p>
+<p><select id="lists" multiple="multiple" size="10"></select></p>
+<p><input type="button" value="Import" id="import">&nbsp;&nbsp;<input type="button" value="Outport" id="outport">&nbsp;&nbsp;<input type="button" value="Save" id="save">&nbsp;&nbsp;<input type="button" value="Localization" id="localization">&nbsp;&nbsp;<input type="button" value="Random" id="random">&nbsp;&nbsp;<input type="button" value="RandomAll" id="randomall"></p>
+</p>
+<div>
+{<br />
+"id" : <input type="text" id="id"><br />
+<span>"buffs":</span>"buff_library":<br />
+	<select id="buffs" multiple="multiple" size="10"></select>
+	<input type="button" id="subbuffs" value="-">
+	<input type="button" id="addbuffs" value="+">
+	<select id="buff_library" multiple="multiple" size="10"></select>
+<br />
+<span>"hero_class_requirements":</span>"hero_classes":<br />
+	<select id="hero_class_requirements" multiple="multiple" size="10"></select>
+	<input type="button" id="subclasses" value="-">
+	<input type="button" id="addclasses" value="+">
+	<select id="hero_classes" multiple="multiple" size="10"></select>
+<br />
+<br />
+<span>"rarity" : <input type="text" id="rarity"></span><select id="rarities" multiple="multiple" size="5"></select>
+<br />
+"price" : <input type="text" id="price"><br />
+}
+<div>
+<textarea id="content" rows="12" cols="120"></textarea>
+</body>
+</html>
